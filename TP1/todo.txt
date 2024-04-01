@@ -5,16 +5,16 @@
 4   latitud                   | Ponemos el centro de CABA en las que tienen NULL
 5   longitud                  | Ponemos el centro de CABA en las que tienen NULL
 6   place_l2                  | 
-7   place_l3                  | ?
-8   place_l4                  | ?
+7   place_l3                  | Se rellenan nulls con ?????
+8   place_l4                  | Se elimina. Post filtrado solo un 3.5% no es null
 9   place_l5                  | Se elimina. Todos nulos post filtrado inicial
 10  place_l6                  | Se elimina. Todos nulos post filtrado inicial
 11  operation                 | Se elimina. Se utilizó para el filtrado inicial
 12  property_type             | Se elimina. Se utilizó para el filtrado inicial
-13  property_rooms            | Se rellenan nulls en base a "property_bedrooms" o +1. * (1)
-14  property_bedrooms         | Se rellenan nulls en base a "property_rooms" o -1. (1)
-15  property_surface_total    | Se rellenan nulls en base a "property_bedrooms" o +10%.
-16  property_surface_covered  | Se rellenan nulls en base a "property_bedrooms" o -10%.
+13  property_rooms            | Se rellenan nulls en base a "property_bedrooms" o +1. 
+14  property_bedrooms         | Se rellenan nulls en base a "property_rooms" o -1. 
+15  property_surface_total    | Se rellenan nulls en base a "property_surface_covered" o +10%.
+16  property_surface_covered  | Se rellenan nulls en base a "property_surface_total" o -10%.
 17  property_price            | 
 18  property_currency         | Se elimina. Se utilizó para el filtrado inicial
 19  property_title            | Se elimina. Todo falopa
@@ -23,4 +23,28 @@
 Eliminamos las filas del filtrado inicial
 Eliminamos las filas que simultaneamente tienen null en "property_rooms" y "property_bedrooms".
 
-* (1). Con "o +1" me refiero al dato o al dato +1. Ejemplo. Si el dato con el que reemplazo el null es 6, el o +1 sería 6 o 7.
+
+
+Los datos relevantes del DF original terminan siendo entonces
+
+4   latitud                  
+5   longitud                 
+6   place_l2                 
+7   place_l3                            
+13  property_rooms           
+14  property_bedrooms        
+15  property_surface_total   
+16  property_surface_covered 
+17  property_price           
+
+
+
+Preguntas y cosas para el informe.
+
+1. Las fechas tienen algun tipo de relevancia?
+2. Podemos confiar en las latitudes y longitudes que se nos otorgan? Es mas confiable el dato que pueda haber en cualquiera de las columnas place o las coordenadas?
+3. Suponiendo que las coordenadas son confiables. Vale la pena rellenar todos los place en base a las coordenadas?
+4. Eliminamos las filas donde property_rooms y property_bedrooms son nulos. Representan aprox un 0.5% de los datos post filtrado. Es correcto esto o conviene asignar algun valor en su lugar?
+5. Los nulls de property_bedrooms se llenan en base a property_rooms asignando el mismo valor o inferior. Si se sabe que hay 1 ambiente, entonces ese debe ser la habitación. Si hay 2 ambientes, probablemente 1 sea habitación y el otro no. Si hay 5 ambientes, podemos estimar no más de 3 habitaciones. (No viceversa ya que no hay nulls de rooms que no tengan null en bedrooms despues del filtrado). Este quiza es el punto mas flojo hasta el momento.
+6. Similar al tema anterior pasa con las columnas property_surface_total y property_surface_covered. Los nulos los rellenamos en base a la otra. Siempre la superficie cubierta va a ser menor o igual a la superficie total. Si reemplazamos el null de la total con el dato de la cubierta, la total estimamos puede ser hasta un 10-15% mayor que la cubierta. Entonces podemos llenarlo utilizando un seed (o algo que randomice) el dato, y redondeando los valores para que no nos queden 500 mts cubiertos y 501 de total. 
+7. El property title es cualquier cosa, lo eliminamos
