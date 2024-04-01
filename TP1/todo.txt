@@ -1,0 +1,26 @@
+0   id                        | Se conserva solamente para separar el dataset
+1   start_date                | Se elimina. Irrelevante
+2   end_date                  | Se elimina. Irrelevante
+3   created_on                | Se elimina. Irrelevante
+4   latitud                   | Ponemos el centro de CABA en las que tienen NULL
+5   longitud                  | Ponemos el centro de CABA en las que tienen NULL
+6   place_l2                  | 
+7   place_l3                  | ?
+8   place_l4                  | ?
+9   place_l5                  | Se elimina. Todos nulos post filtrado inicial
+10  place_l6                  | Se elimina. Todos nulos post filtrado inicial
+11  operation                 | Se elimina. Se utilizó para el filtrado inicial
+12  property_type             | Se elimina. Se utilizó para el filtrado inicial
+13  property_rooms            | Se rellenan nulls en base a "property_bedrooms" o +1. * (1)
+14  property_bedrooms         | Se rellenan nulls en base a "property_rooms" o -1. (1)
+15  property_surface_total    | Se rellenan nulls en base a "property_bedrooms" o +10%.
+16  property_surface_covered  | Se rellenan nulls en base a "property_bedrooms" o -10%.
+17  property_price            | 
+18  property_currency         | Se elimina. Se utilizó para el filtrado inicial
+19  property_title            | Se elimina. Todo falopa
+
+
+Eliminamos las filas del filtrado inicial
+Eliminamos las filas que simultaneamente tienen null en "property_rooms" y "property_bedrooms".
+
+* (1). Con "o +1" me refiero al dato o al dato +1. Ejemplo. Si el dato con el que reemplazo el null es 6, el o +1 sería 6 o 7.
