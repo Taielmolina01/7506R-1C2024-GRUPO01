@@ -9,3 +9,11 @@
 - Oggero, Gino 106675
 - Vera Benítez, Sebastian 104115
 
+#### TODO
+
+- Terminar la imputacion de datos (dropear las coords que quedan con nulls) (quedan coords, property_surface_covered y place_l3 nulos)
+- Hacer las visus que falten
+- Hacer el analisis de valores atipicos
+- Limpiar el notebook y borrar lo que está de más
+- Corregir las visus que hagan falta (poner titulos, rotular los ejes, colores, etc)
+
