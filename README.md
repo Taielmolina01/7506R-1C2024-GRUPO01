@@ -12,7 +12,7 @@
 
 - Emprolijar notebook.
 - Terminar informe.
-- Agregar mapa de CABA para 2 y 3 clusters.
+- Agregar informe pdf en el repo.
 
 
 
