@@ -13,6 +13,3 @@
 - Emprolijar notebook.
 - Terminar informe.
 - Agregar informe pdf en el repo.
-
-
-
