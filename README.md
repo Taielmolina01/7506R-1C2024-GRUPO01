@@ -16,4 +16,4 @@
 
 ## ETAPA 2
 
-Unicamente empece a hacer el filtrado si alguien lee esto en el interin me fui a jugar un cs en un rato sigo y dejo todo clean para entrenar ya
+UPDATE: esta todo igual que antes, duda de todas formas, que paso con lo de si property_title contenia un barrio, haciamos que eso sea su place_l3? lo sacamos por que salvaba pocas filas unicamente? despues preguntar que hacemos con eso, si lo agregamos o ya fue
