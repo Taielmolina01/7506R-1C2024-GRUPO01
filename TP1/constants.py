@@ -12,3 +12,5 @@ PATH_DF = "properati_argentina_2021.csv"
 
 PATH_DF_TRAIN = "df_train.csv"
 PATH_DF_TEST = "df_test.csv"
+
+SEED = 123
