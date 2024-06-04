@@ -30,4 +30,4 @@
 
 ## TP2
 
-Probamos con Seba por ahora con countvectorizer y buscando hiperparametros medio villero no mucho mas que eso, habria que ir probando pero 0.69 en principio zafa
+hay que ver el tema de imprimir resultados porque xgboost piden que sean 0 y 1, habria q ver de pasar todo a eso, y antes de guardar que pase 0: negativo y 1: positivo
