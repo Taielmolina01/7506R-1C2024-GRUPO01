@@ -32,5 +32,6 @@
 
 ### TO DO
 
-- [ ] hay que ver el tema de imprimir resultados porque xgboost piden que sean 0 y 1, habria q ver de pasar todo a eso, y antes de guardar que pase 0: negativo y 1: positivo
-- [ ] normalizar acentos
+- [ ] Pasar la red con la busqueda de hiperparametros a la notebook de la entrega.
+- [ ] Terminar de emprolijar notebooks.
+- [ ] Terminar informe.
