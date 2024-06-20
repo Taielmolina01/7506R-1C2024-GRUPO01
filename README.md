@@ -32,6 +32,6 @@
 
 ### TO DO
 
-- [ ] Pasar la red con la busqueda de hiperparametros a la notebook de la entrega.
+- [X] Pasar la red con la busqueda de hiperparametros a la notebook de la entrega.
 - [ ] Terminar de emprolijar notebooks.
 - [ ] Terminar informe.
