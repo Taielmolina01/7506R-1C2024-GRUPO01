@@ -12,13 +12,11 @@
 
 ## TP1
 
-## Links
-
 - [Reporte](https://github.com/Taielmolina01/7506R-1C2024-GRUPO01/blob/main/TP1/7506R-TP1-GRUPO01-REPORTE.pdf)
 
 ---
 
-## Como correr la notebook del checkpoint 2
+### Como correr la notebook del checkpoint 2
 
 1. Subir la notebook [`7606R_TP1_GRUPO01_ENTREGA_N2.ipynb`](https://github.com/Taielmolina01/7506R-1C2024-GRUPO01/blob/main/TP1/7606R_TP1_GRUPO01_ENTREGA_N2.ipynb)
 2. Cargar los siguientes archivos:
@@ -30,8 +28,4 @@
 
 ## TP2
 
-### TO DO
-
-- [X] Pasar la red con la busqueda de hiperparametros a la notebook de la entrega.
-- [ ] Terminar de emprolijar notebooks.
-- [ ] Terminar informe.
+- [Reporte](https://github.com/Taielmolina01/7506R-1C2024-GRUPO01/blob/main/TP2/7506R-TP2-GRUPO01-REPORTE.pdf)
